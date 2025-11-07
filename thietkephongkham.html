@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BTL Thiết kế </title>
+     <link rel="stylesheet" href="style.css">
+    <!-- ẩn tất cả các trang -->
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('section').forEach(sec => sec.classList.remove('visible'));
+            document.getElementById(pageId).classList.add('visible'); 
+        }
+        </script>
+</head>
+<body>
+   <header>
+    <h1>Phòng khám sức khỏe Tịch Nguyệt</h1>
+    <nav>
+        <a href="#" onclick="showPage('home')">Trang chủ</a>
+        <a href="#" onclick="showPage('about')">Gioi thiệu</a> 
+        <a href="#" onclick="showPage('services')">Dịch vụ</a>
+        <a href="#" onclick="showPage('booking')">Đặt lịch</a>
+        <a href="#" onclick="showPage('advice')">Tư vấn</a>
+        <a href="#" onclick="showPage('contact')">Liên hệ</a>
+        </nav>
+    </header>
+    <!-- Trang chủ -->
+     <section id="home" class="visible">
+        <h1>Chăm sóc sức khỏe cho bạn là sứ mệnh của chúng tôi</h1>
+        <h2>Phòng khám mang đến dịch vụ y tế tận tâm, chuyên nghiệp và chất lượng cao</h2>
+        <div class="image-box">
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTSNlRxAKVihDxTOBOAl6NdfY2S-zhKt9ONWg&s" alt=" Phòng khám hiện đại">
+            </div>
+            <div class="image-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxgPdl0CC2T-Lia4lW4dkAHSfXtMlSxQFpiw&s" alt="Đội ngũ bác sĩ">
+            </div>
+            <div class="image-box">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVruPpMHoU7-g3Kg9J3R-LjCsWZ4ePu4-2zg&s" alt="Trang thiết bị y tế">
+            </div>
+        </div>
+     </section>
+     <!-- Gioi thiệu -->
+      <section id="about">
+        <h2>Gioi thiệu</h2>
+        <p> Phòng khám Tịch Nguyệt là địa chỉ chăm sóc sức khỏe tin cậy, hướng đến việc mang lại dịch vụ y tế chất lượng, an toàn và tận tâm cho mọi khách hàng. Với đội ngũ y- bác sĩ chuyên môn vững vàng, giàu kinh nghiệm cùng hệ thống trang thiết bị hiện đại, phòng khám nỗ lực đem đến cho người bệnh sự yên tâm và hài lòng trong quá trình thăm khám và điều trị.<br> Phòng khám Tịch Nguyệt hoath động với phương châm <b>" Vì sức khỏe và sự an tâm của bạn" </b>, không ngừng nâng cao chất lượng phục vụ, cải thiện quy trình khám chữa bệnh và xây dựng môi trường y tế thân thiện,chuyên nghiệp. </p>
+        <img src="tải xuống.jfif" alt="Phòng khám">
+      </section>
+    <!-- Dịch vụ -->
+     <section id="services">
+        <h2>Dịch vụ của chúng tôi</h2>
+        <ul style="list-style: none; padding: 0;">
+            <li>Khám tổng quát định kỳ</li>
+            <li>Xét nghiệm máu và sinh hóa</li>
+            <li>Siêu âm, chụp X-quang</li>
+            <li>Khám sức khỏe trẻ em</li>
+            <li>Tư vấn dinh dưỡng và tâm lý</li>
+        </ul>
+     </section>
+     
+
+</body>
+</html>
