@@ -1,0 +1,129 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: #ffe6f0; /* hồng nhạt */
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header */
+header {
+  background: linear-gradient(to right, #ff99cc, #cc99ff, #66ccff);
+  color: rgb(243, 237, 237);
+  padding: 20px 0;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+header nav a:hover,
+header nav a.active {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 0 20px;
+}
+
+/* Thông tin liên hệ */
+#contact-info h2 {
+  color: #cc33ff; /* tím */
+  margin-bottom: 15px;
+}
+
+#contact-info p {
+  margin-bottom: 15px;
+  color: #660066; /* tím đậm */
+  font-size: 1.05rem;
+}
+
+/* Form liên hệ */
+#contact-form h2 {
+  color: #cc33ff;
+  margin: 20px 0;
+}
+
+#contact-form form {
+  display: flex;
+  flex-direction: column;
+}
+
+#contact-form input,
+#contact-form textarea {
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 2px solid #cc99ff;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+#contact-form input:focus,
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #66ccff; /* xanh */
+  box-shadow: 0 0 5px rgba(102,204,255,0.5);
+}
+
+#contact-form button {
+  padding: 15px;
+  background: #cc33ff; /* tím */
+  color: white;
+  font-size: 1.1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#contact-form button:hover {
+  background: #9933cc;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #ff99cc;
+  color: rgb(119, 35, 35);
+  margin-top: 40px;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+/* Responsive */
+@media(max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  #contact-form input,
+  #contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  #contact-form button {
+    font-size: 1rem;
+  }
+}
