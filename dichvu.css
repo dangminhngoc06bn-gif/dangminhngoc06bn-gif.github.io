@@ -1,4 +1,4 @@
-/* Reset & base */
+/* Reset  */
 * { box-sizing: border-box; margin: 0; padding: 0; }
 html,body { height: 100%; }
 body {
@@ -47,8 +47,8 @@ body {
 
 .service-media {
     display: flex;
-    align-items: center;    /* căn giữa theo chiều dọc */
-    justify-content: center; /* căn giữa theo chiều ngang */
+    align-items: center;  
+    justify-content: center;
     flex: 0 0 45%;
     height: 300px;
 }

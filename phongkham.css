@@ -1,12 +1,9 @@
-/* ===== BODY ===== */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   background: linear-gradient(135deg, #ff9bc8 0%, #ffc4dd 40%, #d7b0ff 70%, #b7eaff 100%);
   color: #333;
 }
-
-/*  MENU  */
 nav {
   position: sticky;
   top: 0;
@@ -22,11 +19,11 @@ nav {
 /* cho màn nhỏ thành cuộn ngang */
 @media(max-width:600px)
    nav {
-    justify-content: flex-start;     /* bắt đầu bên trái để người dùng kéo dễ */
-    gap: 16px;                       /* khoảng cách hợp lý trên mobile */
-    padding: 12px;                   /* gọn hơn */
-    overflow-x: auto;                /* bật cuộn ngang */
-    white-space: nowrap;             /* ngăn xuống dòng */
+    justify-content: flex-start;  
+    gap: 16px;                    
+    padding: 12px;                
+    overflow-x: auto;             
+    white-space: nowrap;       
   }
 nav a {
   text-decoration: none;
@@ -38,21 +35,21 @@ nav a {
 }
 
 nav a.active, nav a:hover {
-  background-color: #ff1493; /* đổi màu khi hover hoặc active */
+  background-color: #ff1493; 
   color: #fff;
 }
-/*  HEADER*/
+/*header*/
 header {
-  display: flex;                /* chia header thành 2 cột */
-  align-items: center;          /* canh giữa theo chiều dọc */
+  display: flex;             
+  align-items: center;      
   justify-content: space-between;
-  padding: 40px 80px;           /* cho nó to ra */
-  height: 80vh;                 /* chiếm  chiều cao màn hình */
+  padding: 40px 80px;     
+  height: 80vh;           
   background: linear-gradient(135deg, #ff9bc8, #ffc4dd, #d7b0ff, #b7eaff);
 }
 
 .header-text {
-  width: 50%;                   /* chữ bên trái */
+  width: 50%;            
 }
 
 .header-text h1 {
@@ -66,7 +63,7 @@ header {
 }
 
 .header-img {
-  width: 65%;                   /* ảnh bên phải */
+  width: 65%;                 
   height: 100%;
   display: flex;
   justify-content: flex-end;
@@ -74,16 +71,15 @@ header {
 }
 
 .header-img img {
-  height: 80%;        /* ẢNH CAO = % MÀN HÌNH */
-  width: auto;         /* giữ tỉ lệ */
-  object-fit: cover;   /* luôn đẹp, không méo */
-  border-radius: 10%;    /*  bo góc */
+  width: auto;        
+  object-fit: cover;  
+  border-radius: 10%;   
 }
 }
 
 
 
-/*  SECTION  */
+/* section  */
 section {
   max-width: 1200px;
   margin: 50px auto;
@@ -102,7 +98,7 @@ section h2 {
   -webkit-text-fill-color: transparent;
 }
 
-/* ===== GIỚI THIỆU ===== */
+/* giới thiệu*/
 .intro {
   display: flex;
   gap: 40px;
@@ -133,7 +129,7 @@ section h2 {
   box-sizing: border-box;
 }
 
-/* ===== DỊCH VỤ ===== */
+/* dịch vụ */
 .services {
   display: flex;
   flex-wrap: wrap;
@@ -168,7 +164,7 @@ section h2 {
   text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
 
-/*  ĐẶT LỊCH  */
+/* đặt lịch  */
 #booking form {
   display: flex;
   flex-direction: column;
@@ -195,7 +191,7 @@ section h2 {
   font-weight: bold;
 }
 
-/* ===== LIÊN HỆ ===== */
+/*  liên hệ  */
 #contact {
   background: linear-gradient(135deg, #ffe6f0, #ffdde1);
   padding: 50px 20px;
@@ -220,7 +216,7 @@ footer{
   border-radius:8px;
 }
 
-/* ===== RESPONSIVE ===== */
+/*  responive */
 @media(max-width: 900px){
   .intro { flex-direction: column; }
   .intro img { width: 90%; }

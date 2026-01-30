@@ -7,7 +7,7 @@
 }
 
 body {
-  background: #ffe6f0; /* hồng nhạt */
+  background: #ffe6f0; 
   color: #333;
   line-height: 1.6;
 }
@@ -49,19 +49,19 @@ main {
 
 /* Phần thông tin đặt lịch */
 #booking-info h2 {
-  color: #cc33ff; /* tím */
+  color: #cc33ff; 
   margin-bottom: 15px;
 }
 
 #booking-info p {
   margin-bottom: 15px;
-  color: #660066; /* tím đậm */
+  color: #660066; 
   font-size: 1.05rem;
 }
 
 /* Form đặt lịch */
 #booking {
-  background: #ffccdd; /* hồng nhạt */
+  background: #ffccdd; 
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
@@ -71,7 +71,7 @@ main {
 #booking h2 {
   text-align: center;
   margin-bottom: 25px;
-  color: #cc33ff; /* tím */
+  color: #cc33ff; 
 }
 
 #booking form {
@@ -91,13 +91,13 @@ main {
 #booking input:focus,
 #booking textarea:focus {
   outline: none;
-  border-color: #66ccff; /* xanh */
+  border-color: #66ccff;
   box-shadow: 0 0 5px rgba(102,204,255,0.5);
 }
 
 #booking button {
   padding: 15px;
-  background: #cc33ff; /* tím */
+  background: #cc33ff;
   color: white;
   font-size: 1.1rem;
   border: none;

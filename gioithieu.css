@@ -4,7 +4,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  background: #ffe6f0; /* Hồng nhạt nền tổng thể */
+  background: #ffe6f0;
   color: #333;
 }
 
@@ -34,7 +34,7 @@ main.intro {
   max-width: 1100px;
   margin: 30px auto;
   padding: 40px;
-  background-color: #fff0f5; /* Hồng nhạt hơn */
+  background-color: #fff0f5; 
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(36, 179, 167, 0.1);
 }
@@ -42,7 +42,7 @@ main.intro {
 main h1 {
   text-align:center;
   margin-bottom:30px;
-  color:#ff3399; /* Hồng đậm */
+  color:#ff3399; 
 }
 
 main section {
@@ -55,7 +55,7 @@ main section {
 
 main section h2 {
   margin-bottom:15px;
-  color:#9933ff; /* Tím đậm */
+  color:#9933ff;
 }
 
 main section p {
@@ -75,7 +75,7 @@ footer {
   text-align:center;
   padding:15px;
   margin-top:30px;
-  background:#ffb6c1; /* Hồng */
+  background:#ffb6c1;
   color:rgb(128, 40, 40);
   font-weight:bold;
   border-top:2px solid #ff80ab;
