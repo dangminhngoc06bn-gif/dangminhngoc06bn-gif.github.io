@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>CaféBook Admin</title>
+
+<link rel="stylesheet"
+href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+
+<link rel="stylesheet"
+href="css/style.css">
+
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg custom-navbar">
+
+<div class="container-fluid">
+
+<a class="navbar-brand fw-bold"
+href="index.html">
+
+☕ CaféBook Admin
+
+</a>
+
+<button
+id="darkModeBtn"
+class="btn btn-outline-dark">
+
+<i class="fa-solid fa-moon"></i>
+
+</button>
+
+</div>
+
+</nav>
+
+<div class="container-fluid">
+
+<div class="row">
+
+<!-- SIDEBAR -->
+
+<div class="col-lg-2">
+
+<div class="admin-sidebar">
+
+<button
+class="sidebar-btn active"
+data-section="dashboardSection">
+
+<i class="fa-solid fa-chart-line"></i>
+
+Dashboard
+
+</button>
+
+<button
+class="sidebar-btn"
+data-section="drinkSection">
+
+<i class="fa-solid fa-mug-hot"></i>
+
+Đồ uống
+
+</button>
+
+<button
+class="sidebar-btn"
+data-section="tableSection">
+
+<i class="fa-solid fa-chair"></i>
+
+Bàn
+
+</button>
+
+<button
+class="sidebar-btn"
+data-section="reservationSection">
+
+<i class="fa-solid fa-calendar-check"></i>
+
+Đặt bàn
+
+</button>
+
+</div>
+
+</div>
+
+<!-- CONTENT -->
+
+<div class="col-lg-10 py-4">
+
+<!-- DASHBOARD -->
+
+<div id="dashboardSection"
+class="admin-section">
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+
+<div>
+
+<h2 class="fw-bold">
+Dashboard
+</h2>
+
+<p class="text-muted mb-0">
+Tổng quan hoạt động CaféBook
+</p>
+
+</div>
+
+</div>
+
+<div class="row">
+
+<div class="col-md-3">
+
+<div class="card dashboard-card">
+
+<div class="card-body text-center">
+
+<h3 id="totalDrinks">
+
+0
+
+</h3>
+
+<p>Tổng đồ uống</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card dashboard-card">
+
+<div class="card-body text-center">
+
+<h3 id="totalTables">
+
+0
+
+</h3>
+
+<p>Tổng bàn</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card dashboard-card">
+
+<div class="card-body text-center">
+
+<h3 id="totalReservations">
+
+0
+
+</h3>
+
+<p>Tổng đơn</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="col-md-3">
+
+<div class="card dashboard-card">
+
+<div class="card-body text-center">
+
+<h3 id="todayReservations">
+
+0
+
+</h3>
+
+<p>Đơn hôm nay</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<h4 class="dashboard-title mt-5 mb-4">
+    <i class="fa-solid fa-chart-pie me-2"></i>
+    Thống kê nhanh
+</h4>
+
+<div class="stat-progress-card">
+
+    <div class="stat-row">
+        <div class="d-flex justify-content-between mb-2">
+            <span>
+                ☕ Coffee
+            </span>
+
+            <span id="coffeePercentText">
+                100%
+            </span>
+        </div>
+
+        <div class="progress progress-custom">
+            <div
+                id="coffeePercent"
+                class="progress-bar bg-warning">
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-row">
+        <div class="d-flex justify-content-between mb-2">
+            <span>
+                🍵 Tea
+            </span>
+
+            <span id="teaPercentText">
+                100%
+            </span>
+        </div>
+
+        <div class="progress progress-custom">
+            <div
+                id="teaPercent"
+                class="progress-bar bg-success">
+            </div>
+        </div>
+    </div>
+
+    <div class="stat-row">
+        <div class="d-flex justify-content-between mb-2">
+            <span>
+                🥤 Smoothie
+            </span>
+
+            <span id="smoothiePercentText">
+                100%
+            </span>
+        </div>
+
+        <div class="progress progress-custom">
+            <div
+                id="smoothiePercent"
+                class="progress-bar bg-info">
+            </div>
+        </div>
+    </div>
+
+</div>
+
+
+
+</div>
+<!-- DRINK SECTION -->
+
+<div
+id="drinkSection"
+class="admin-section d-none">
+
+<div class="d-flex justify-content-between mb-3">
+
+<h2>
+
+Quản lý đồ uống
+
+</h2>
+
+<div class="action-group">
+
+<button
+    class="btn btn-main"
+    data-bs-toggle="modal"
+    data-bs-target="#drinkModal">
+
+    <i class="fa-solid fa-plus"></i>
+
+    Thêm
+
+</button>
+
+<button
+    id="exportDrinkBtn"
+    class="btn btn-outline-main">
+
+    <i class="fa-solid fa-file-csv"></i>
+
+    Export CSV
+
+</button>
+
+</div>
+
+</div>
+
+<div class="row mb-3">
+
+<div class="col-md-4">
+
+<input
+id="searchDrink"
+class="form-control"
+placeholder="Tìm đồ uống...">
+
+</div>
+
+</div>
+
+<table
+class="table table-hover table-bordered">
+
+<thead class="table-warning">
+
+<tr>
+
+<th>ID</th>
+<th>Ảnh</th>
+<th>Tên</th>
+<th>Giá</th>
+<th>Danh mục</th>
+<th>Tồn kho</th>
+<th>Tác vụ</th>
+
+</tr>
+
+</thead>
+
+<tbody id="drinkTableBody">
+
+</tbody>
+
+</table>
+
+</div>
+<!-- TABLE SECTION -->
+
+<div
+id="tableSection"
+class="admin-section d-none">
+
+<div class="d-flex justify-content-between mb-3">
+
+<h2>
+
+Quản lý bàn
+
+</h2>
+
+<div>
+
+<button
+class="btn btn-primary"
+data-bs-toggle="modal"
+data-bs-target="#tableModal">
+
+<i class="fa-solid fa-plus"></i>
+
+Thêm bàn
+
+</button>
+
+<button
+id="exportTableBtn"
+class="btn btn-success">
+
+<i class="fa-solid fa-file-csv"></i>
+
+Export CSV
+
+</button>
+
+</div>
+
+</div>
+
+<div class="row mb-3">
+
+<div class="col-md-4">
+
+<input
+id="searchTable"
+class="form-control"
+placeholder="Tìm mã bàn...">
+
+</div>
+
+</div>
+
+<table
+class="table table-bordered table-hover">
+
+<thead class="table-info">
+
+<tr>
+
+<th>ID</th>
+<th>Mã Bàn</th>
+<th>Sức Chứa</th>
+<th>Vị Trí</th>
+<th>Trạng Thái</th>
+<th>Tác Vụ</th>
+
+</tr>
+
+</thead>
+
+<tbody id="tableTableBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+<!-- RESERVATION SECTION -->
+
+<div
+id="reservationSection"
+class="admin-section d-none">
+
+<div class="d-flex justify-content-between mb-3">
+
+<h2>
+
+Quản lý đặt bàn
+
+</h2>
+
+<div>
+
+<button
+id="exportReservationBtn"
+class="btn btn-success">
+
+<i class="fa-solid fa-file-csv"></i>
+
+Export CSV
+
+</button>
+
+</div>
+
+</div>
+
+<div class="row mb-3">
+
+<div class="col-md-4">
+
+<input
+id="searchReservation"
+class="form-control"
+placeholder="Tìm khách hàng...">
+
+</div>
+
+</div>
+
+<table
+class="table table-bordered table-hover">
+
+<thead class="table-success">
+
+<tr>
+
+<th>Khách</th>
+<th>SĐT</th>
+<th>Ngày</th>
+<th>Giờ</th>
+<th>Bàn</th>
+<th>Trạng Thái</th>
+<th>Tác Vụ</th>
+
+</tr>
+
+</thead>
+
+<tbody id="reservationTableBody">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div
+class="modal fade"
+id="drinkModal">
+
+<div class="modal-dialog modal-lg">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 id="drinkModalTitle">
+
+Thêm Đồ Uống
+
+</h5>
+
+<button
+class="btn-close"
+data-bs-dismiss="modal">
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<input
+type="hidden"
+id="drinkId">
+
+<div class="row">
+
+<div class="col-md-6">
+
+<label>Tên đồ uống</label>
+
+<input
+id="drinkName"
+class="form-control mb-3">
+
+</div>
+
+<div class="col-md-6">
+
+<label>Giá</label>
+
+<input
+id="drinkPrice"
+type="number"
+class="form-control mb-3">
+
+</div>
+
+</div>
+
+<label>Ảnh</label>
+
+<input
+id="drinkImage"
+class="form-control mb-3">
+
+<label>Danh mục</label>
+
+<select
+id="drinkCategory"
+class="form-select mb-3">
+
+<option>Coffee</option>
+
+<option>Tea</option>
+
+<option>Smoothie</option>
+
+<option>Juice</option>
+
+<option>Food</option>
+
+</select>
+
+<label>Mô tả</label>
+
+<textarea
+id="drinkDescription"
+class="form-control mb-3">
+
+</textarea>
+
+<label>Tồn kho</label>
+
+<input
+id="drinkStock"
+type="number"
+class="form-control">
+
+</div>
+
+<div class="modal-footer">
+
+<button
+class="btn btn-secondary"
+data-bs-dismiss="modal">
+
+Đóng
+
+</button>
+
+<button
+id="saveDrinkBtn"
+class="btn btn-success">
+
+Lưu
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div
+class="modal fade"
+id="tableModal">
+
+<div class="modal-dialog">
+
+<div class="modal-content">
+
+<div class="modal-header">
+
+<h5 id="tableModalTitle">
+
+Thêm Bàn
+
+</h5>
+
+<button
+class="btn-close"
+data-bs-dismiss="modal">
+
+</button>
+
+</div>
+
+<div class="modal-body">
+
+<input
+type="hidden"
+id="tableId">
+
+<label>Mã bàn</label>
+
+<input
+id="tableNumber"
+class="form-control mb-3">
+
+<label>Sức chứa</label>
+
+<input
+id="tableCapacity"
+type="number"
+class="form-control mb-3">
+
+<label>Vị trí</label>
+
+<input
+id="tableLocation"
+class="form-control mb-3">
+
+<label>Trạng thái</label>
+
+<select
+id="tableStatus"
+class="form-select">
+
+<option value="Available">
+
+Available
+
+</option>
+
+<option value="Reserved">
+
+Reserved
+
+</option>
+
+<option value="Occupied">
+
+Occupied
+
+</option>
+
+</select>
+
+</div>
+
+<div class="modal-footer">
+
+<button
+class="btn btn-secondary"
+data-bs-dismiss="modal">
+
+Đóng
+
+</button>
+
+<button
+id="saveTableBtn"
+class="btn btn-primary">
+
+Lưu
+
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+<div
+id="toastContainer"
+class="toast-container
+position-fixed
+bottom-0
+end-0
+p-3">
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="js/api.js"></script>
+
+<script src="js/utils.js"></script>
+
+<script src="js/validation.js"></script>
+
+<script src="js/admin.js"></script>
+
+</body>
+</html>
